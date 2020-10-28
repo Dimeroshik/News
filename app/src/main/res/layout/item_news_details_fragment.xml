@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        >
+
+        <TextView
+            android:id="@+id/news_details_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text = "Title"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            />
+
+        <ImageView
+            android:id="@+id/news_details_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:maxHeight="300dp"
+            tools:src="@drawable/test" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:id="@+id/news_details_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:text="Title title title title title title title title title title title title title title title title title title title title title title" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:id="@+id/news_details_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text = "Title"
+            android:textAlignment="textEnd"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:id="@+id/news_details_link_original"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:autoLink="web"
+            />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -14,6 +14,7 @@ interface NewsApi {
 
     @GET("/v2/top-headlines?country=us")
     fun getNews(
-        @Query("apiKey") key: String
+        @Query("apiKey") key: String,
+        @Query("pageSize") count: String
     ): Call<NewsJson>
 }

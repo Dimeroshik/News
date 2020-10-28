@@ -3,24 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="@dimen/spacing_normal_16">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="8dp"
+    >
 
     <ImageView
         android:id="@+id/iv_image_single"
         android:layout_width="@dimen/avatar_item_size"
         android:layout_height="@dimen/avatar_item_size"
         android:layout_alignParentLeft="true"
-        android:background="@android:color/background_dark"
+        android:background="@android:color/white"
+        android:scaleType="centerInside"
         />
 
     <TextView
         android:id="@+id/tv_title_single"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="chat title"
+        tools:text="chat title"
         android:textColor="@color/color_primary"
         android:fontFamily="sans-serif-medium"
-        android:textSize="14sp"
+        android:textSize="@dimen/text_size_title_16"
         android:layout_toRightOf="@id/iv_image_single"
         android:layout_marginLeft="@dimen/spacing_normal_16"
         android:layout_marginRight="@dimen/spacing_normal_16"
@@ -31,14 +34,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_title_single"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="-1dp"
+        android:layout_marginLeft="@dimen/spacing_normal_16"
         android:layout_marginRight="@dimen/spacing_normal_16"
         android:layout_toRightOf="@id/iv_image_single"
         android:fontFamily="sans-serif-medium"
-        android:text="Когда я проходил интенсив, я мало спал, а еще я люблю кушать"
+        tools:text="Когда я учился, я мало спал, а еще я люблю кушать"
         android:textColor="@color/color_gray_dark"
         android:textSize="14sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_gray_light"
+        android:layout_below="@id/tv_description_single"
+        android:layout_marginTop="8dp"/>
 
 
 </RelativeLayout>
