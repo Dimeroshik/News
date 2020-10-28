@@ -2,15 +2,12 @@ package com.example.news
 
 import android.os.Bundle
 import android.util.Log
-import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentManager
 import com.example.news.Extensions.isInternetAvailable
 import com.example.news.Model.News
 import com.example.news.`interface`.OnItemClickListener
-import com.example.news.adapters.NewsAdapter
 import com.example.news.fragments.NewsDetailsFragment
 import com.example.news.fragments.NewsListFragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -29,10 +26,6 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
 
             newsList = NewsListFragment()
             newsDetails = NewsDetailsFragment()
-
-            supportActionBar?.setHomeButtonEnabled(true)
-            supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
 
             supportFragmentManager
                 .beginTransaction()
@@ -53,7 +46,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     private fun openNewsDetails(news: News){
         val newsBundle = Bundle()
         newsBundle.putParcelable("args", news)
-        newsDetails = NewsDetailsFragment.getListNews(newsBundle)
+        newsDetails = NewsDetailsFragment.getInstance(newsBundle)
 
         iv_navigation_back.visibility = View.VISIBLE
 

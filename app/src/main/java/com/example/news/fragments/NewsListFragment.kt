@@ -48,8 +48,7 @@ class NewsListFragment : Fragment(), NewsListUpdateListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootView = inflater.inflate(R.layout.news_list_fragment, container, false)
-        return rootView
+        return inflater.inflate(R.layout.news_list_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -15,10 +15,10 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 
 class NewsController(
-    private val baseUrl : String,
+    baseUrl : String,
     val newsListUpdateListener: NewsListUpdateListener
 ) {
-    lateinit var newsApi: NewsApi
+    private var newsApi: NewsApi
 
     init {
         val interceptor = HttpLoggingInterceptor()
@@ -51,8 +51,8 @@ class NewsController(
                 call: Call<NewsJson>,
                 response: Response<NewsJson>
             ) {
-                var news: MutableList<News>
-                var newsJson = response.body()
+                val news: MutableList<News>
+                val newsJson = response.body()
 
                 Log.d("M_OnResponse", "True")
 

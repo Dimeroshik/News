@@ -1,6 +1,5 @@
 package com.example.news.fragments
 
-import android.opengl.Visibility
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -19,7 +18,7 @@ import java.lang.Exception
 class NewsDetailsFragment: Fragment() {
 
     companion object {
-        fun getListNews(newsBundle: Bundle): NewsDetailsFragment{
+        fun getInstance(newsBundle: Bundle): NewsDetailsFragment{
             val newFragment = NewsDetailsFragment()
             newFragment.arguments = newsBundle
             return newFragment
@@ -31,12 +30,11 @@ class NewsDetailsFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootView = inflater.inflate(R.layout.item_news_details_fragment, container, false)
-        return rootView
+        return inflater.inflate(R.layout.item_news_details_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        var news = arguments?.getParcelable<News>("args") ?: News()
+        val news = arguments?.getParcelable<News>("args") ?: News()
 
         setData(news_details_title, news.title)
         setData(news_details_image, news.urlToImage)
@@ -47,7 +45,7 @@ class NewsDetailsFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
     }
 
-    fun setData (view: View, args: String?){
+    private fun setData (view: View, args: String?){
         when(view){
             is TextView ->
                 if(args != null) view.text = args
