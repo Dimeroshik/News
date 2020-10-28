@@ -1,4 +1,4 @@
-package com.example.news.Model
+package com.example.news.model
 
 import com.google.gson.annotations.Expose
 

@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.news.Model.News
+import com.example.news.model.News
 import com.example.news.R
 import com.example.news.`interface`.NewsListUpdateListener
 import com.example.news.`interface`.OnItemClickListener

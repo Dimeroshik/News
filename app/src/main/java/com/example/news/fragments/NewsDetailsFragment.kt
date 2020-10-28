@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.example.news.Model.News
+import com.example.news.model.News
 import com.example.news.R
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso

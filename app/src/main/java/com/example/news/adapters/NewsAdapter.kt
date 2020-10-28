@@ -6,11 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.news.Model.News
+import com.example.news.model.News
 import com.example.news.R
 import com.example.news.`interface`.NewsListUpdateListener
 import com.example.news.`interface`.OnItemClickListener
-import com.example.news.fragments.NewsListFragment
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import kotlinx.android.extensions.LayoutContainer

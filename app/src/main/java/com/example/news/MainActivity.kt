@@ -5,8 +5,8 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.news.Extensions.isInternetAvailable
-import com.example.news.Model.News
+import com.example.news.extensions.isInternetAvailable
+import com.example.news.model.News
 import com.example.news.`interface`.OnItemClickListener
 import com.example.news.fragments.NewsDetailsFragment
 import com.example.news.fragments.NewsListFragment

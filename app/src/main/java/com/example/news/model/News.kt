@@ -1,4 +1,4 @@
-package com.example.news.Model
+package com.example.news.model
 
 import android.os.Parcel
 import android.os.Parcelable

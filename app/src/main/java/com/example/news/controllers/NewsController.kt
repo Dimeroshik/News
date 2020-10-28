@@ -1,8 +1,8 @@
 package com.example.news.controllers
 
 import android.util.Log
-import com.example.news.Model.News
-import com.example.news.Model.NewsJson
+import com.example.news.model.News
+import com.example.news.model.NewsJson
 import com.example.news.`interface`.NewsListUpdateListener
 import com.example.news.`interface`.NewsApi
 import okhttp3.OkHttpClient

@@ -1,7 +1,7 @@
 package com.example.news.`interface`
 
-import com.example.news.Model.News
-import com.example.news.Model.NewsJson
+import com.example.news.model.News
+import com.example.news.model.NewsJson
 import retrofit2.Call
 import retrofit2.http.*
 

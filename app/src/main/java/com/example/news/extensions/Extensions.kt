@@ -1,12 +1,10 @@
 
 
-package com.example.news.Extensions
+package com.example.news.extensions
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.os.Build
-import androidx.annotation.RequiresApi
 
 fun isInternetAvailable(context: Context): Boolean {
     var result = false
