@@ -70,4 +70,10 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     override fun onItemClick(newsItem: News) {
         openNewsDetails(newsItem)
     }
+
+    override fun onBackPressed() {
+        if (iv_navigation_back.visibility == View.VISIBLE)
+            iv_navigation_back.visibility = View.GONE
+        super.onBackPressed()
+    }
 }

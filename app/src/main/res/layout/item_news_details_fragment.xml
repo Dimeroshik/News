@@ -15,9 +15,9 @@
             android:id="@+id/news_details_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text = "Title"
+            tools:text = "@string/item_news_details_title"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="@dimen/font_title_20"
             android:textColor="@android:color/black"
             />
 
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/spacing_small_8"
             android:maxHeight="300dp"
             tools:src="@drawable/test" />
 
@@ -37,24 +37,25 @@
             android:layout_height="wrap_content"
             android:textAlignment="textStart"
             android:textColor="@android:color/black"
-            android:textSize="14sp"
-            tools:text="Title title title title title title title title title title title title title title title title title title title title title title" />
+            android:textSize="@dimen/font_article_14"
+            tools:text="@string/item_news_details_content" />
 
         <TextView
             android:layout_marginTop="8dp"
             android:id="@+id/news_details_author"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text = "Title"
+            tools:text = "@string/item_news_details_author"
             android:textAlignment="textEnd"
-            android:textSize="14sp"
+            android:textSize="@dimen/font_article_14"
             android:textColor="@android:color/black"
             />
 
         <TextView
             android:id="@+id/news_details_link_original"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="yandex.com"
             android:textAlignment="textEnd"
             android:autoLink="web"
             />

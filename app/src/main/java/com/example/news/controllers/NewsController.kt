@@ -13,15 +13,14 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+
 class NewsController(
-    val baseUrl : String,
+    private val baseUrl : String,
     val newsListUpdateListener: NewsListUpdateListener
 ) {
+    lateinit var newsApi: NewsApi
 
-    fun getNews(settings : Map<String, String>) {
-
-        var news: MutableList<News>
-
+    init {
         val interceptor = HttpLoggingInterceptor()
         interceptor.level = HttpLoggingInterceptor.Level.BODY
 
@@ -32,12 +31,14 @@ class NewsController(
             .baseUrl(baseUrl)
             .client(client.build())
             .build()
-        val newsApi = retrofit.create(NewsApi :: class.java)
+         newsApi = retrofit.create(NewsApi :: class.java)
+    }
+
+    fun getNews(settings : Map<String, String>) {
 
         val apiKey = settings.getValue("apiKey")
         val pageSize = settings.getValue("pageSize")
         val myCall: Call<NewsJson> = newsApi.getNews(apiKey, pageSize)
-
 
         myCall.enqueue(object: Callback<NewsJson>{
 
@@ -50,9 +51,10 @@ class NewsController(
                 call: Call<NewsJson>,
                 response: Response<NewsJson>
             ) {
-                Log.d("M_OnResponse", "True")
-
+                var news: MutableList<News>
                 var newsJson = response.body()
+
+                Log.d("M_OnResponse", "True")
 
                 if (newsJson != null) {
                     news = newsJson.articles ?: mutableListOf()
@@ -62,7 +64,6 @@ class NewsController(
                     Log.d("M_getNews", "News size is: ${news.size}")
 
                 }else {
-                    news = mutableListOf()
                     Log.d("M_getNews", "newsJson == null")
                 }
             }

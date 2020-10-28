@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">News</string>
+    <string name="image_content_description">Image</string>
+    <string name="toolbar_title">News</string>
+    <string name="item_news_details_title">Title</string>
+    <string name="item_news_details_content">Title title title title title title title title title title title title title title title title title title title title title title</string>
+    <string name="item_news_details_author">Title</string>
+    <string name="item_news_single_description">Когда я учился, я мало спал, а еще я люблю кушать</string>
 </resources>

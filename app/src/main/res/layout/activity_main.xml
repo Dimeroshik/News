@@ -10,28 +10,29 @@
     <LinearLayout
         android:id="@+id/toolBar"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="@dimen/toolbar_size_56"
         android:background="@color/color_primary"
         android:orientation="horizontal"
-        android:paddingLeft="16dp">
+        android:paddingStart="16dp">
         
         <ImageView
             android:id="@+id/iv_navigation_back"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="@dimen/icon_size_24"
+            android:layout_height="@dimen/icon_size_24"
             android:src="@drawable/ic_navigation_back"
             android:layout_gravity="center_vertical"
             android:layout_marginTop="2dp"
+            android:contentDescription="@string/image_content_description"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="News"
+            android:textSize="@dimen/font_title_20"
+            android:text="@string/toolbar_title"
             android:layout_gravity="center_vertical"
             android:textColor="@android:color/white"
-            android:layout_marginLeft="16dp"/>
+            android:layout_marginLeft="@dimen/spacing_normal_16"/>
 
     </LinearLayout>
 

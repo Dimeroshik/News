@@ -23,7 +23,7 @@
         tools:text="chat title"
         android:textColor="@color/color_primary"
         android:fontFamily="sans-serif-medium"
-        android:textSize="@dimen/text_size_title_16"
+        android:textSize="@dimen/font_normal_16"
         android:layout_toRightOf="@id/iv_image_single"
         android:layout_marginLeft="@dimen/spacing_normal_16"
         android:layout_marginRight="@dimen/spacing_normal_16"
@@ -38,15 +38,15 @@
         android:layout_marginRight="@dimen/spacing_normal_16"
         android:layout_toRightOf="@id/iv_image_single"
         android:fontFamily="sans-serif-medium"
-        tools:text="Когда я учился, я мало спал, а еще я люблю кушать"
+        tools:text="@string/item_news_single_description"
         android:textColor="@color/color_gray_dark"
-        android:textSize="14sp" />
+        android:textSize="@dimen/font_article_14" />
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/color_gray_light"
         android:layout_below="@id/tv_description_single"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="@dimen/spacing_small_8"/>
 
 
 </RelativeLayout>
